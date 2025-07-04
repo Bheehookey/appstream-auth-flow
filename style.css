@@ -1,0 +1,80 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #f9f9f9;
+  text-align: center;
+  padding: 40px;
+  color: #333;
+}
+
+h1 {
+  margin-bottom: 30px;
+}
+
+#flow-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 20px 30px;
+  margin: 15px 0;
+  width: 90%;
+  max-width: 600px;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease;
+  position: relative;
+}
+
+.step.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.step svg {
+  width: 40px;
+  height: 40px;
+  margin-right: 20px;
+}
+
+.tooltip {
+  position: absolute;
+  bottom: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: #333;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  display: none;
+}
+
+.step:hover .tooltip {
+  display: block;
+}
+
+.controls {
+  margin-top: 30px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  background-color: #4ECDC4;
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #3cb9aa;
+}
