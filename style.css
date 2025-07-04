@@ -78,3 +78,74 @@ button {
 button:hover {
   background-color: #3cb9aa;
 }
+
+.business-summary {
+  background: #ffffff;
+  border-left: 6px solid #4ECDC4;
+  padding: 15px 20px;
+  margin-bottom: 20px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 16px;
+  color: #444;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  border-radius: 8px;
+}
+
+.toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.toggle input {
+  display: none;
+}
+
+.slider {
+  width: 50px;
+  height: 24px;
+  background-color: #ccc;
+  border-radius: 24px;
+  position: relative;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.slider::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
+  top: 2px;
+  left: 2px;
+  transition: 0.3s;
+}
+
+input:checked + .slider::before {
+  transform: translateX(26px);
+}
+
+input:checked + .slider {
+  background-color: #4ECDC4;
+}
+
+.label-text {
+  font-size: 16px;
+  color: #333;
+}
+
+.tech-detail {
+  display: none;
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.tech-visible .tech-detail {
+  display: block;
+}
