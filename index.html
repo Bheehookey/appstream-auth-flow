@@ -7,13 +7,24 @@
 </head>
 <body>
   <h1>SAML Authentication Flow 🌐</h1>
-  <div id="flow-container">
-    <!-- Steps will be injected here -->
+
+  <div class="business-summary">
+    <p><strong>Business View:</strong> A user logs into your portal, their identity is verified by their company, and they’re seamlessly launched into a secure AppStream application—no passwords or manual setup required.</p>
   </div>
+
+  <label class="toggle">
+    <input type="checkbox" id="techToggle" onchange="toggleTechnicalView()" />
+    <span class="slider"></span>
+    <span class="label-text">Technical View</span>
+  </label>
+
+  <div id="flow-container"></div>
+
   <div class="controls">
     <button onclick="nextStep()">Next Step</button>
     <button onclick="resetFlow()">Replay</button>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
